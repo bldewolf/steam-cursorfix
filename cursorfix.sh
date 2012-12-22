@@ -5,7 +5,7 @@ if ! test -f libcursorfix.so; then
 fi
 
 if $(which steam > /dev/null); then
-    LD_PRELOAD=libcursorfix.so steam
+    LD_PRELOAD=${PWD}/libcursorfix.so steam
 else
     return 1
 fi
